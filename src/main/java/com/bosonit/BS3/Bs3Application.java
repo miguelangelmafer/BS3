@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import javax.annotation.PostConstruct;
+import java.util.Arrays;
 
 
 @SpringBootApplication
@@ -34,6 +35,11 @@ public class Bs3Application {
 		return p ->
 		{ System.out.println("Soy la tercera clase");
 		};
+	}
+
+	@Bean
+	CommandLineRunner terceraconparametros(){
+		return new Tercera();
 	}
 
 
